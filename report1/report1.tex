@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{comment}
+\usepackage{array}
+
+
+\setlength{\hoffset}{0cm}
+\setlength{\oddsidemargin}{-3mm}
+\setlength{\evensidemargin}{-3cm}
+\setlength{\marginparsep}{0cm}
+\setlength{\marginparwidth}{0cm}
+\setlength{\textheight}{24.7cm}
+\setlength{\textwidth}{17cm}
+\setlength{\topmargin}{-45pt}
+
+\renewcommand{\baselinestretch}{1.6}
+\renewcommand{\floatpagefraction}{1}
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+%\renewcommand{\figurename}{Fig.} %図をFig.にする
+
+
+%図のキャプションからコロン：を消す
+\makeatletter
+\long\def\@makecaption#1#2{% #1=図表番号、#2=キャプション本文
+\sbox\@tempboxa{#1. #2}
+\ifdim \wd\@tempboxa >\hsize
+#1 #2\par 
+\else
+\hb@xt@\hsize{\hfil\box\@tempboxa\hfil}
+\fi}
+\makeatother
+
+
+
+\begin{document}
+%
+\title{\vspace{-30mm}  計算数学特論~レポート課題 \\  機械知能工学専攻~~16344217~~津上~祐典}
+\date{}
+%
+\maketitle
+%
+\vspace{-30mm}
+\parindent = 0pt %すべての段落で字下げをしない
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{課題１}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-3mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{(1)~$(Z_p*,\times)$が群の構造を持つことを示せ．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-3mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{条件1.~演算$\times$が閉じている．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5mm}
+演算$\times$が閉じている，つまり$a,b\in Z_p*$($a,b$は自然数)のとき，
+$a\times b(\rm{mod}~p)$ $\in Z_p*$であることを示せば良い．
+一般に$a\times b(\rm{mod}~p)=$ $0,1,\cdots,p-1$である
+$Z_p*=\left\{1,2,\cdots,p-1\right\}$
+\vspace{-5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{(2)~(1)を用いて，フェルマーの小定理$a^{p-1}(\rm{mod}~p)=1$($a$は$Z_p*$の任意の要素)を示せ．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+おおおおおおおおおおおお
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{課題２}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-3mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(1)~$p=7,q=13$で公開鍵$e$と秘密鍵$d$を設定せよ．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
+おおおおおおおおお
+\vspace{-5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(2)~コーディングを以下とする．a=1,b=1$\cdots$,z=26,A=27,B=28,$\cdots$,Z=52,0=60,1=61$\cdots$,9=69}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
