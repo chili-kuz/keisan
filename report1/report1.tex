@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{jarticle}
 \usepackage[dvipdfmx]{graphicx}
-\usepackage{amsmath}
+\usepackage{amsmath,amssymb}
 \usepackage{subfigure}
 \usepackage{comment}
 \usepackage{array}
@@ -39,13 +39,13 @@
 
 \begin{document}
 %
-\title{\vspace{-30mm}  計算数学特論~レポート課題 \\  機械知能工学専攻~~16344217~~津上~祐典}
+\title{\vspace{-30mm}  \large{計算数学特論~レポート課題~~~機械知能工学専攻~~16344217~~津上~祐典}}
 \date{}
 %
 \maketitle
 %
-\vspace{-30mm}
-\parindent = 0pt %すべての段落で字下げをしない
+\vspace{-35mm}
+%\parindent = 0pt %すべての段落で字下げをしない
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{課題１}
@@ -59,29 +59,144 @@
 \subsubsection*{条件1.~演算$\times$が閉じている．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-5mm}
-演算$\times$が閉じている，つまり$a,b\in Z_p*$($a,b$は自然数)のとき，
-$a\times b(\rm{mod}~p)$ $\in Z_p*$であることを示せば良い．
-一般に$a\times b(\rm{mod}~p)=$ $0,1,\cdots,p-1$である
-$Z_p*=\left\{1,2,\cdots,p-1\right\}$
+演算$\times$が閉じている，つまり$a,b\in Z_p*$のとき，
+$a\times b(\mathrm{mod}~p)$ $\in Z_p*$であることを示せば良い．
+$Z_p*= \left\{1,2,\cdots,p-1 \right\}$より，$a\times b(\mathrm{mod}~p)\in Z_p*$
+が成り立たない場合は，$a\times b(\mathrm{mod}~p)=0$のときである．背理法によ
+り$a\times b(\mathrm{mod}~p)=0$が成り立たないことを示すことで演算$\times$が
+閉じていることを示す．
+
+はじめに，$a\times b(\mathrm{mod}~p)=0$と仮定する．
+$a\times b(\mathrm{mod}~p)=0$となるのは
+%
+\begin{equation}
+ a \times b =kp
+\end{equation}
+%
+となるときである．ただし$k$は自然数である．式変形すると，
+%
+\begin{equation}
+ \frac{a \times b}{p} = k
+\end{equation}
+%
+となる．右辺の$k$は自然数であるから，左辺も自然数でないとならない．しか
+し，左辺の分母$p$は素数である．また$a,b\in Z_p*$であり，$a\neq p,b\neq p$
+であるから左辺は約分できず自然数とならない．よって，(2)式また(1)式は成り
+立たない．これは最初の仮定に矛盾する．よって，$a\times b(\mathrm{mod}~p)=0$
+は成り立たず，演算$\times$が閉じていると言える．
+%
+\vspace{-5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{条件2.~結合法則が成立する．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5mm}
+$a,b,c\in Z_p*$とすると，$a,b,c$は自然数であるから，結合法則
+$a \times (b \times c)=(a \times b) \times c$
+は成り立つ．
+%
+\vspace{-5mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{条件3.~単位元，逆元がある．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5mm}
+$a\in Z_p*$とすると，$a \times 1 = 1 \times a = a$が成り立ち，単位元であ
+る$1$が存在する．また，$ax+py=\mathrm{gcd}(a,p)=1$とすると，
+%
+\begin{eqnarray}
+ ax + py = 1\\
+ ax = 1(\mathrm{mod}~p) = 1
+\end{eqnarray}
+%
+となり，$a$の逆元は$x$であり逆元は存在する．以上の3つの条件全て満たして
+いるので，$(Z_p*,\times)$が群の構造を持つ．
 \vspace{-5mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{(2)~(1)を用いて，フェルマーの小定理$a^{p-1}(\rm{mod}~p)=1$($a$は$Z_p*$の任意の要素)を示せ．}
+\subsection*{(2)~(1)を用いて，フェルマーの小定理$a^{p-1}(\mathrm{mod}~p)=1$($a$は$Z_p*$の任意の要素)を示せ．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
-おおおおおおおおおおおお
-\vspace{-10mm}
+はじめに，$a,b,c\in Z_p*~,~b\neq c$のとき，$a \times b \neq a \times c$を
+背理法を用いて示す．$a,b,c\in Z_p*~,~b\neq c$のとき
+$a \times b = a\times c$と仮定する．両辺に左から$a$の逆元をかけると
+%
+\begin{eqnarray}
+ a^{-1}(a \times b) &=& a^{-1} (a \times c) \\
+ b &=& c
+\end{eqnarray}
+%
+となり，$b\neq c$と矛盾する．
+$a,b,c\in Z_p*~,~b\neq c$のとき，$a \times b \neq a \times c$は成り立つ．
+$Z_p*$の要素をすべてかけたものを考える．
+%
+\begin{equation} \label{equ:12}
+ 1 \times 2 \times \cdots \times (p-1) 
+\end{equation}
+%
+次に，$Z_p*$の要素に$a\in Z_p*$をかけて，そのすべてをかけたもの考える．
+%
+\begin{equation} \label{equ:1a}
+ (1 \times a)\times (2 \times a)
+  \times \cdots \times \left\{ (p-1) \times a\right\}
+\end{equation}
+%
+ここで$a,b,c\in Z_p*~,~b\neq c$のとき，$a \times b \neq a \times c$より，
+式の$(1 \times a),(2 \times a),\cdots,(p-1) \times a$はすべて異なる要素
+である．また，課題1(1)より演算$\times$は閉じているので
+(\ref{equ:12}),(\ref{equ:1a})式は等しい．
+%
+\begin{eqnarray}
+ 1 \times 2 \times \cdots \times (p-1) &=& (1 \times a)\times (2 \times a)
+  \times \cdots \times \left\{ (p-1) \times a\right\} \\
+&=&a^{p-1}(1 \times 2 \times \cdots \times (p-1))
+\end{eqnarray}
+%
+となり，
+%
+\begin{equation}
+ a^{p-1} (\mathrm{mod}~p)=1
+\end{equation}
+%
+が成り立つ．
+\vspace{-20mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{課題２}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-3mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{(1)~$p=7,q=13$で公開鍵$e$と秘密鍵$d$を設定せよ．}
+\subsection*{(1)~$p=7,q=13$で公開鍵$e$と秘密鍵$d$を設定せよ．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
-おおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおおお
-おおおおおおおおお
+公開鍵$e$と秘密鍵$d$は
+%
+\begin{align*}
+  n&=p \times q = 7 \times 13 = 91 \\
+ \lambda &= \mathrm{lcm}(p-1,q-1) = \mathrm{lcm}(7-1,13-1) =\mathrm{lcm}(6,12)=12 \\
+ 1&=\mathrm{gcd}(d,\lambda) \iff \mathrm{gcd}(d,12)=1 ~~\therefore d=5\\
+ ed &= 1(\mathrm{mod}~\lambda) \iff e5=1(\mathrm{mod}~12) ~~\therefore e=5
+\end{align*}
+%
+より$e=5,~d=5$となる．
 \vspace{-5mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection*{(2)~コーディングを以下とする．a=1,b=1$\cdots$,z=26,A=27,B=28,$\cdots$,Z=52,0=60,1=61$\cdots$,9=69}
+\subsection*{(2)~コーディングを以下とする．a=1,$\cdots$,z=26,A=27,$\cdots$,Z=52,0=60,$\cdots$,9=69}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(a)~kitを送受信せよ．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-5mm}
+k,i,tの文字コードはそれぞれ$x_1=11,x_2=9,x_3=20$であるので暗号化コード
+$c_1,c_2,c_3$は
+%
+\begin{align*}
+ c_1&=11^5(\mathrm{mod}~91)=11^2\cdot11^2\cdot11(\mathrm{mod}~91)=30\cdot30\cdot11(\mathrm{mod}~91)=81\cdot11(\mathrm{mod}~91)=72\\
+ c_2&=9^5(\mathrm{mod}~91)=9^3\cdot9^2(\mathrm{mod}~91)=1\cdot9^2(\mathrm{mod}~91)=81\\
+ c_3&=20^5(\mathrm{mod}~91)=20^2\cdot20^2\cdot20(\mathrm{mod}~91)=36\cdot36\cdot20(\mathrm{mod}~91)=36\cdot83(\mathrm{mod}~91)=76
+\end{align*}
+%
+となる．また復元化コードは
+%
+\begin{align*}
+ x_1&=a\\
+ x_2&=a\\
+ x_3&=a
+\end{align*}
+%
+となり文字コードと一致する．
 \end{document}
