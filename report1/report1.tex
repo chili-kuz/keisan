@@ -4,7 +4,9 @@
 \usepackage{subfigure}
 \usepackage{comment}
 \usepackage{array}
-
+\usepackage{setspace} % setspaceパッケージのインクルード
+\usepackage{ascmac}
+%\usepackage{fancybx}
 
 \setlength{\hoffset}{0cm}
 \setlength{\oddsidemargin}{-3mm}
@@ -15,6 +17,7 @@
 \setlength{\textwidth}{17cm}
 \setlength{\topmargin}{-45pt}
 
+
 \renewcommand{\baselinestretch}{1.6}
 \renewcommand{\floatpagefraction}{1}
 \renewcommand{\topfraction}{1}
@@ -22,7 +25,7 @@
 \renewcommand{\textfraction}{0}
 \renewcommand{\labelenumi}{(\roman{enumi})}
 %\renewcommand{\figurename}{Fig.} %図をFig.にする
-
+\renewcommand{\baselinestretch}{1}
 
 %図のキャプションからコロン：を消す
 \makeatletter
@@ -35,18 +38,22 @@
 \fi}
 \makeatother
 
-
-
 \begin{document}
 %
-\title{\vspace{-30mm}  \large{計算数学特論~レポート課題~~~機械知能工学専攻~~16344217~~津上~祐典}}
+\title{\vspace{-30mm} \fbox{\large{計算数学特論~レポート課題~~~機械知能工学専攻~~16344217~~津上~祐典}}}
 \date{}
 %
 \maketitle
 %
-\vspace{-35mm}
+\vspace{-30mm}
 %\parindent = 0pt %すべての段落で字下げをしない
 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\abovedisplayskip}{0pt} % 数式上部のマージン
+\setlength{\belowdisplayskip}{0pt} % 数式下部のマージン
+%\setstretch{1.3} % ページ全体の行間を設定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{課題１}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,7 +65,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{条件1.~演算$\times$が閉じている．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-5mm}
+\vspace{-4mm}
 演算$\times$が閉じている，つまり$a,b\in Z_p*$のとき，
 $a\times b(\mathrm{mod}~p)$ $\in Z_p*$であることを示せば良い．
 $Z_p*= \left\{1,2,\cdots,p-1 \right\}$より，$a\times b(\mathrm{mod}~p)\in Z_p*$
@@ -85,20 +92,20 @@ $a\times b(\mathrm{mod}~p)=0$となるのは
 立たない．これは最初の仮定に矛盾する．よって，$a\times b(\mathrm{mod}~p)=0$
 は成り立たず，演算$\times$が閉じていると言える．
 %
-\vspace{-5mm}
+\vspace{-6mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{条件2.~結合法則が成立する．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-5mm}
+\vspace{-4mm}
 $a,b,c\in Z_p*$とすると，$a,b,c$は自然数であるから，結合法則
 $a \times (b \times c)=(a \times b) \times c$
 は成り立つ．
 %
-\vspace{-5mm}
+\vspace{-6mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{条件3.~単位元，逆元がある．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-5mm}
+\vspace{-4mm}
 $a\in Z_p*$とすると，$a \times 1 = 1 \times a = a$が成り立ち，単位元であ
 る$1$が存在する．また，$ax+py=\mathrm{gcd}(a,p)=1$とすると，
 %
@@ -113,17 +120,17 @@ $a\in Z_p*$とすると，$a \times 1 = 1 \times a = a$が成り立ち，単位�
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{(2)~(1)を用いて，フェルマーの小定理$a^{p-1}(\mathrm{mod}~p)=1$($a$は$Z_p*$の任意の要素)を示せ．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-はじめに，$a,b,c\in Z_p*~,~b\neq c$のとき，$a \times b \neq a \times c$を
-背理法を用いて示す．$a,b,c\in Z_p*~,~b\neq c$のとき
-$a \times b = a\times c$と仮定する．両辺に左から$a$の逆元をかけると
+%はじめに，$a,b,c\in Z_p*~,~b\neq c$のとき，$a \times b \neq a \times c$を
+%背理法を用いて示す．$a,b,c\in Z_p*~,~b\neq c$のとき
+%$a \times b = a\times c$と仮定する．両辺に左から$a$の逆元をかけると
 %
-\begin{eqnarray}
- a^{-1}(a \times b) &=& a^{-1} (a \times c) \\
- b &=& c
-\end{eqnarray}
+%\begin{eqnarray}
+ %a^{-1}(a \times b) &=& a^{-1} (a \times c) \\
+ %b &=& c
+%\end{eqnarray}
 %
-となり，$b\neq c$と矛盾する．
-$a,b,c\in Z_p*~,~b\neq c$のとき，$a \times b \neq a \times c$は成り立つ．
+%となり，$b\neq c$と矛盾する．
+%$a,b,c\in Z_p*~,~b\neq c$のとき，$a \times b \neq a \times c$は成り立つ．
 $Z_p*$の要素をすべてかけたものを考える．
 %
 \begin{equation} \label{equ:12}
@@ -155,7 +162,7 @@ $Z_p*$の要素をすべてかけたものを考える．
 \end{equation}
 %
 が成り立つ．
-\vspace{-20mm}
+\vspace{-10mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{課題２}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,14 +180,15 @@ $Z_p*$の要素をすべてかけたものを考える．
 \end{align*}
 %
 より$e=5,~d=5$となる．
-\vspace{-5mm}
+\vspace{-6mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{(2)~コーディングを以下とする．a=1,$\cdots$,z=26,A=27,$\cdots$,Z=52,0=60,$\cdots$,9=69}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-3mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{(a)~kitを送受信せよ．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-5mm}
+\vspace{-4mm}
 k,i,tの文字コードはそれぞれ$x_1=11,x_2=9,x_3=20$であるので暗号化コード
 $c_1,c_2,c_3$は
 %
@@ -193,9 +201,55 @@ $c_1,c_2,c_3$は
 となる．また復元化コードは
 %
 \begin{align*}
- x_1&=a\\
- x_2&=a\\
- x_3&=a
+ X_1&=72^5(\mathrm{mod}~91)=72^2\cdot72^2\cdot72(\mathrm{mod}~91)=88\cdot88\cdot72(\mathrm{mod}~91)=9\cdot72(\mathrm{mod}~91)=11\\
+ X_2&=81^5(\mathrm{mod}~91)=81^2\cdot81^2\cdot81(\mathrm{mod}~91)=9\cdot9\cdot81(\mathrm{mod}~91)=9\\
+ X_3&=76^5(\mathrm{mod}~91)=76^2\cdot76^2\cdot76(\mathrm{mod}~91)=43\cdot43\cdot76(\mathrm{mod}~91)=29\cdot76(\mathrm{mod}~91)=20
+\end{align*}
+%
+となり文字コードと一致する．
+\vspace{-7mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(b)~各人のイニシャル2文字を送受信せよ．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+私のイニシャルYTの文字コードは$x_1=51,x_2=46$であるので暗号化コード
+$c_1,c_2$は
+%
+\begin{align*}
+ c_1&=51^5(\mathrm{mod}~91)=51^2\cdot51^2\cdot51(\mathrm{mod}~91)=53\cdot53\cdot51(\mathrm{mod}~91)=79\cdot51(\mathrm{mod}~91)=25\\
+ c_2&=46^5(\mathrm{mod}~91)=46^2\cdot46^2\cdot46(\mathrm{mod}~91)=23\cdot23\cdot46(\mathrm{mod}~91)=74\cdot46(\mathrm{mod}~91)=37
+\end{align*}
+%
+となる．また復元化コードは
+%
+\begin{align*}
+ X_1&=25^5(\mathrm{mod}~91)=25^2\cdot25^2\cdot25(\mathrm{mod}~91)=79\cdot79\cdot25(\mathrm{mod}~91)=53\cdot25(\mathrm{mod}~91)=51\\
+ X_2&=37^5(\mathrm{mod}~91)=37^2\cdot37^2\cdot37(\mathrm{mod}~91)=4\cdot4\cdot37(\mathrm{mod}~91)=46
+\end{align*}
+%
+となり文字コードと一致する．
+\vspace{-7mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(c)~学籍番号の下４桁を送受信せよ．}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+文字コードは$x_1=64,x_2=62,x_3=61,x_4=67$であるので暗号化コード
+$c_1,c_2,c_3,c_4$は
+%
+\begin{align*}
+ c_1&=64^5(\mathrm{mod}~91)=64^2\cdot64^2\cdot64(\mathrm{mod}~91)=1\cdot1\cdot64(\mathrm{mod}~91)=64\\
+ c_2&=62^5(\mathrm{mod}~91)=62^2\cdot62^2\cdot62(\mathrm{mod}~91)=22\cdot22\cdot62(\mathrm{mod}~91)=29\cdot62(\mathrm{mod}~91)=69\\
+ c_3&=61^5(\mathrm{mod}~91)=61^2\cdot61^2\cdot61(\mathrm{mod}~91)=81\cdot81\cdot61(\mathrm{mod}~91)=9\cdot61(\mathrm{mod}~91)=3\\
+ c_4&=67^5(\mathrm{mod}~91)=67^2\cdot67^2\cdot67(\mathrm{mod}~91)=30\cdot30\cdot67(\mathrm{mod}~91)=81\cdot67(\mathrm{mod}~91)=58
+\end{align*}
+%
+となる．また復元化コードは
+%
+\begin{align*}
+ X_1&=64^5(\mathrm{mod}~91)=64^2\cdot64^2\cdot64(\mathrm{mod}~91)=1\cdot1\cdot64(\mathrm{mod}~91)=64\\
+ X_2&=69^5(\mathrm{mod}~91)=69^2\cdot69^2\cdot69(\mathrm{mod}~91)=29\cdot29\cdot69(\mathrm{mod}~91)=22\cdot69(\mathrm{mod}~91)=62\\
+ X_3&=3^5(\mathrm{mod}~91)=61\\
+ X_4&=58^5(\mathrm{mod}~91)=58^2\cdot58^2\cdot58(\mathrm{mod}~91)=88\cdot88\cdot58(\mathrm{mod}~91)=9\cdot58(\mathrm{mod}~91)=67
 \end{align*}
 %
 となり文字コードと一致する．

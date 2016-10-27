@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1477456213 "report1.dvi" "report1.pdf" "report1" 1477456213
-  "report1.dvi" 1477456213 8320 3bd01c733fe8924d8412306af21cd45e "latex"
+["dvipdf"] 1477533651 "report1.dvi" "report1.pdf" "report1" 1477533651
+  "report1.dvi" 1477533651 11060 06ee90d62f04e023e42296305b0c8084 "latex"
   (generated)
   "report1.pdf"
-["latex"] 1477456213 "report1.tex" "report1.dvi" "report1" 1477456213
+["latex"] 1477533651 "report1.tex" "report1.dvi" "report1" 1477533651
   "/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty" 1463608860 8253 473e0e41f9adadb1977e8631b8f72ea6 ""
   "/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty" 1463608860 18425 5b3c0c59d76fac78978b5558e83c1f36 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1359763108 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
@@ -22,14 +22,17 @@
   "/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty" 1428932888 8125 557ab9f1bfa80d369fb45a914aa8a3b4 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty" 1428932888 2594 d18d5e19aa8239cf867fa670c556d2e9 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty" 1454284088 3980 0a268fbfda01e381fa95821ab13b6aee ""
+  "/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty" 1324344192 22913 a27d7908fc6f0385466454a966a316eb ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.cfg" 1167176009 2062 a0e7d66e09e508f51289a656aec06ed2 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/subfigure/subfigure.sty" 1167176009 15188 91281c7ddbccfa54a8e0c3b56ab5aa72 ""
   "/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty" 1459635588 12398 bd782945c489f84ff012bcea4a712d25 ""
+  "/usr/local/texlive/2016/texmf-dist/tex/platex/base/ascmac.sty" 1462837567 601 ed0d9e02a6ea31a4aa45dceec6706c83 ""
   "/usr/local/texlive/2016/texmf-dist/tex/platex/base/jarticle.cls" 1462837567 25231 a08460ff81096cb3e80d7be01474f985 ""
   "/usr/local/texlive/2016/texmf-dist/tex/platex/base/jsize12.clo" 1462837567 9323 83bc23d71b08185a5a9548b5c60c8249 ""
-  "report1.aux" 1477456213 60 3a654a8ebf81fab9bede6aaf5d5e4db4 ""
-  "report1.tex" 1477456212 6961 b74e3d6d4d0264c7fd8b5b5e6f2a18d8 ""
+  "/usr/local/texlive/2016/texmf-dist/tex/platex/base/tascmac.sty" 1462837567 9533 a69ba108fecf6a01da2d3d397ad8adb0 ""
+  "report1.aux" 1477533651 60 c9d3fb920f7e6bdfa89b135f6f5ba48f ""
+  "report1.tex" 1477533650 9987 1b5b025cf59e794e7e10a8b6d9f90867 ""
   (generated)
-  "report1.dvi"
-  "report1.aux"
   "report1.log"
+  "report1.aux"
+  "report1.dvi"
