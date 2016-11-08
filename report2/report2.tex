@@ -73,29 +73,20 @@ $p=23$の原始元は$a=7$であるので空欄を埋めると以下のように
 \begin{align}
  p&=23 \\
  g&=7 \\
- y&=g^x \nonumber\\
- &=7^{20}\nonumber\\
- &=7^2\cdot7^2\cdot7^2\cdot7^2\cdot7^2\cdot7^2\cdot7^2\cdot7^2\cdot7^2\cdot7^2 \nonumber\\
-  &=3\cdot3\cdot3\cdot3\cdot3\cdot3\cdot3\cdot3\cdot3\cdot3=4\cdot4\cdot4\cdot3=8
+ y&=g^x (\mathrm{mod}~23)=7^{20}=(7^2)^{10}=3^{10}=(3^3)^3\cdot3=4^3\cdot3=8
 \end{align}
 %
 となる．次に乱数$k=9$とし$M=5$を送信する．これ暗号化すると，
 %
 \begin{align}
- C_1&=g^k =7^9=5\\
- C_2&=M \cdot y^k \nonumber\\
- &=5\cdot8 \cdot8^2 \cdot8^2 \cdot8^2 \cdot8^2 \nonumber\\
- &=17\cdot18 \cdot18 \cdot18 \cdot18 \nonumber\\
- &=17\cdot2 \cdot2 =22 
+ C_1&=g^k (\mathrm{mod}~23)=7^9=5\\
+ C_2&=M \cdot y^k (\mathrm{mod}~23)=5\cdot8^9=5\cdot8 \cdot(8^2)^4 =17\cdot18^4=17\cdot18^2\cdot18^2 =17\cdot2\cdot2=22 
 \end{align}
 %
 となる．また，復号化すると，
 %
 \begin{align}
- M'&=C_2\cdot \left\{ (C_1)^x \right\}^{-1} \nonumber\\
- &=22\cdot \left\{15^{20}\right\}^{-1} \nonumber\\
- &=22\cdot 15^2 \nonumber\\
- &=22\cdot18=5
+ M'&=C_2\cdot \left\{ (C_1)^x \right\}^{-1} (\mathrm{mod}~23)=22\cdot \left\{15^{20}\right\}^{-1} =22\cdot 15^2 h=22\cdot18=5
 \end{align}
 %
 となり$M$と一致する．
@@ -108,11 +99,71 @@ $p=23$の原始元は$a=7$であるので空欄を埋めると以下のように
 \subsection*{(1)~$p=23$の原始元を全部求めよ．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-3mm}
-$p=23$の約数は$1,2,11,22$であるので
+$p=23$の約数は$1,2,11,22$であるので，
 \vspace{-6mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{(2)~原始元$\alpha$，乱数$a,b$を与えて共有鍵を持てることを確認せよ．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-3mm}
-$\alpha=7$とすると，
+$\alpha=7$とする．
+\vspace{-6mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{1.~$a=6,b=9$のとき}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+$\alpha^a,\alpha^b$を求めると課題1よりそれぞれ，
+%
+\begin{align}
+ \alpha^a&=7^6(\mathrm{mod}~23)=4 \\
+ \alpha^b&=7^9(\mathrm{mod}~23)=15
+\end{align}
+%
+となり，$\alpha^{ab}$はそれぞれ，
+%
+\begin{align}
+ \alpha^{ab}&=(\alpha^b)^a=15^6(\mathrm{mod}~23)=(15^2)^3=18^3=18^2\cdot18=2\cdot18=3\\
+ \alpha^{ab}&=(\alpha^a)^b=4^9(\mathrm{mod}~23)=(4^3)^3=18^3=3
+\end{align}
+%
+となり一致する．
+\vspace{-6mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{2.~$a=14,b=16$のとき}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+$\alpha^a,\alpha^b$を求めると課題1よりそれぞれ，
+%
+\begin{align}
+ \alpha^a&=7^{14}(\mathrm{mod}~23)=2 \\
+ \alpha^b&=7^{16}(\mathrm{mod}~23)=6
+\end{align}
+%
+となり，$\alpha^{ab}$はそれぞれ，
+%
+\begin{align}
+ \alpha^{ab}&=(\alpha^b)^a=6^{14}(\mathrm{mod}~23)=(6^2)^7=13^7=8\cdot8\cdot8\cdot13=18\cdot12=9\\
+ \alpha^{ab}&=(\alpha^a)^b=2^{16}(\mathrm{mod}~23)=2^5\cdot2^5\cdot2^6=9\cdot9\cdot18=12\cdot18=9
+\end{align}
+%
+となり一致する．
+\vspace{-6mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{3.~$a=20,b=7$のとき}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+$\alpha^a,\alpha^b$を求めると課題1よりそれぞれ，
+%
+\begin{align}
+ \alpha^a&=7^{20}(\mathrm{mod}~23)=8 \\
+ \alpha^b&=7^{7}(\mathrm{mod}~23)=5
+\end{align}
+%
+となり，$\alpha^{ab}$はそれぞれ，
+%
+\begin{align}
+ \alpha^{ab}&=(\alpha^b)^a=5^{20}(\mathrm{mod}~23)=(5^2)^{10}=2^{10}=2^5\cdot2^5=9\cdot9=12\\
+ \alpha^{ab}&=(\alpha^a)^b=8^7(\mathrm{mod}~23)=(8^2)^3\cdot8=18^3\cdot8=18^2\cdot(18\cdot8)=2\cdot6=12
+\end{align}
+%
+となり一致する．
 \end{document}
