@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1478615224 "report2.dvi" "report2.pdf" "report2" 1478615225
-  "report2.dvi" 1478615224 5508 bf88c71d6e5e4a46989abbdf89873032 "latex"
+["dvipdf"] 1478677383 "report2.dvi" "report2.pdf" "report2" 1478677648
+  "report2.dvi" 1478677383 10432 f8b62ecbad222089319bcc26b906dfaa "latex"
   (generated)
   "report2.pdf"
-["latex"] 1478615224 "report2.tex" "report2.dvi" "report2" 1478615225
+["latex"] 1478677383 "report2.tex" "report2.dvi" "report2" 1478677648
   "/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty" 1335995445 8253 3bdedc8409aa5d290a2339be6f09af03 ""
   "/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty" 1335995445 18425 775b341047ce304520cc7c11ca41392e ""
   "/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty" 1359763108 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
@@ -31,9 +31,9 @@
   "/usr/local/texlive/2015/texmf-dist/tex/platex/base/jsize12.clo" 1274206740 9598 fa730555eee77484e4f33073895956b9 ""
   "/usr/local/texlive/2015/texmf-dist/tex/platex/base/tascmac.sty" 1274206740 7559 d5501d5a4108bee88fae069c40104877 ""
   "fig/elga.eps" 1478589022 95369 b96cb69510cf02370f6c6495cfdc27b2 ""
-  "report2.aux" 1478615224 35 c5a48baca516dd1e6988d8da67d20ee5 ""
-  "report2.tex" 1478615223 4968 f58d4c9f1f7f619ae46a26788eebcb70 ""
+  "report2.aux" 1478677383 35 c5a48baca516dd1e6988d8da67d20ee5 ""
+  "report2.tex" 1478677382 7392 7e67a427db9e3c3638715844730fd493 ""
   (generated)
-  "report2.dvi"
   "report2.log"
+  "report2.dvi"
   "report2.aux"

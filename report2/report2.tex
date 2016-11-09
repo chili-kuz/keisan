@@ -62,7 +62,7 @@ $p=23$の原始元は$a=7$であるので空欄を埋めると以下のように
 %
 \begin{figure}[hbp]
  \begin{center}
-  \includegraphics[width=120mm]{fig/elga.eps}
+  \includegraphics[width=100mm]{fig/elga.eps}
  \end{center}
  %\caption{}
  \label{fig:elga}
@@ -99,7 +99,37 @@ $p=23$の原始元は$a=7$であるので空欄を埋めると以下のように
 \subsection*{(1)~$p=23$の原始元を全部求めよ．}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-3mm}
-$p=23$の約数は$1,2,11,22$であるので，
+$p=23$の約数は$1,2,11,22$である，またフェルマーの小定理より
+$a^{23-1}=a^{22}=1$であるから，
+%
+\begin{align*}
+ 2^1&=2~,~2^2=4~,~2^{11}=2\cdot2^5\cdot2^5=2\cdot9\cdot9=1 \nonumber\\
+ 3^1&=3~,~3^2=9~,~3^{11}=(3^3)^2\cdot3^2=4^3\cdot9=18\cdot9=1 \nonumber\\
+ 4^1&=4~,~4^2=16~,~4^{11}=(4^3)^3\cdot4^2=18^3\cdot16=18\cdot18\cdot18\cdot16=2\cdot2=1\nonumber\\
+ 5^1&=5~,~5^2=25=2~,~5^{11}=(5^2)^5\cdot5=2^5\cdot5=9\cdot5=22\nonumber\\
+ 6^1&=6~,~6^2=36=13~,~6^{11}=(6^2)^5\cdot6=13^5\cdot6=13^2\cdot13^2\cdot13\cdot6=8\cdot8\cdot9=18\cdot9=1\nonumber\\
+ 7^1&=7~,~7^2=49=3~,~7^{11}=(7^2)^5\cdot7=3^5\cdot7=3^3\cdot3^2\cdot7=4\cdot9\cdot7=13\cdot7=22\nonumber\\
+ 8^1&=8~,~8^2=64=18~,~8^{11}=(8^2)^5\cdot8=18^5\cdot8=18^2\cdot18^2\cdot18\cdot8=2\cdot2\cdot6=1\nonumber\\
+ 9^1&=9~,~9^2=81=12~,~9^{11}=(9^2)^5\cdot9=12^5\cdot9=12^2\cdot12^2\cdot12\cdot9=6\cdot6\cdot16=6\cdot4=1\nonumber\\
+ 10^1&=10~,~10^2=100=8~,~10^{11}=(10^2)^5\cdot10=8^5\cdot10=8^2\cdot8^2\cdot8\cdot10=18\cdot18\cdot11=22\nonumber\\
+ 11^1&=11~,~11^2=121=6~,~11^{11}=(11^2)^5\cdot11=6^5\cdot11=6^2\cdot6^2\cdot6\cdot11=13\cdot13\cdot20=13\cdot7=22\nonumber
+\end{align*}
+%
+  \begin{align*}
+ 12^1&=12~,~12^2=144=6~,~12^{11}=(12^2)^5\cdot12=6^5\cdot12=6^2\cdot6^2\cdot6\cdot12=13\cdot13\cdot3=13\cdot16=1\nonumber\\
+ 13^1&=13~,~13^2=169=8~,~13^{11}=(13^2)^5\cdot13=8^5\cdot11=8^2\cdot8^2\cdot8\cdot13=18\cdot18\cdot12=2\cdot12=1\nonumber\\
+ 14^1&=14~,~14^2=196=12~,~14^{11}=(14^2)^5\cdot14=12^5\cdot11=12^2\cdot12^2\cdot12\cdot14=6\cdot6\cdot7=13\cdot7=22\nonumber\\
+ 15^1&=15~,~15^2=225=18~,~15^{11}=(15^2)^5\cdot15=18^5\cdot15=18^2\cdot18^2\cdot18\cdot15=2\cdot2\cdot17=22\nonumber\\
+ 16^1&=16~,~16^2=256=3~,~16^{11}=(16^2)^5\cdot16=3^5\cdot16=3^3\cdot3^2\cdot16=4\cdot6=1\nonumber\\
+ 17^1&=17~,~17^2=289=13~,~17^{11}=(17^2)^5\cdot17=13^5\cdot17=13^2\cdot13^2\cdot13\cdot17=8\cdot8\cdot14=18\cdot14=22\nonumber\\
+ 18^1&=18~,~18^2=324=2~,~18^{11}=(18^2)^5\cdot18=2^5\cdot18=2^5\cdot18=9\cdot18=1\nonumber\\
+ 19^1&=19~,~19^2=361=6~,~19^{11}=(19^2)^5\cdot19=16^5\cdot19=16^2\cdot16^2\cdot16\cdot19=3\cdot3\cdot5=22\nonumber\\
+ 20^1&=20~,~20^2=400=9~,~20^{11}=(20^2)^5\cdot20=9^5\cdot20=9^2\cdot9^2\cdot9\cdot20=12\cdot12\cdot19=6\cdot19=22\nonumber\\
+ 21^1&=21~,~21^2=441=4~,~21^{11}=(21^2)^5\cdot21=4^5\cdot21=4^3\cdot4^2\cdot21=18\cdot4\cdot15=18\cdot14=22\nonumber\\
+ 22^1&=11~,~22^2=484=1\nonumber
+  \end{align*}
+%
+より，$p=23$の原始元は$5,7,10,11,14,15,17,19,20,21$である．
 \vspace{-6mm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{(2)~原始元$\alpha$，乱数$a,b$を与えて共有鍵を持てることを確認せよ．}
