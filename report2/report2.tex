@@ -58,7 +58,7 @@
 \section*{課題１}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-4mm}
-$p=23$の原始元は$a=7$であるので空欄を埋めると以下のようになる．
+$a=7$は$p=23$の原始元であるので空欄を埋めると以下のようになる．
 %
 \begin{figure}[hbp]
  \begin{center}
@@ -79,14 +79,14 @@ $p=23$の原始元は$a=7$であるので空欄を埋めると以下のように
 となる．次に乱数$k=9$とし$M=5$を送信する．これ暗号化すると，
 %
 \begin{align}
- C_1&=g^k (\mathrm{mod}~23)=7^9=5\\
+ C_1&=g^k (\mathrm{mod}~23)=7^9=15\\
  C_2&=M \cdot y^k (\mathrm{mod}~23)=5\cdot8^9=5\cdot8 \cdot(8^2)^4 =17\cdot18^4=17\cdot18^2\cdot18^2 =17\cdot2\cdot2=22 
 \end{align}
 %
 となる．また，復号化すると，
 %
 \begin{align}
- M'&=C_2\cdot \left\{ (C_1)^x \right\}^{-1} (\mathrm{mod}~23)=22\cdot \left\{15^{20}\right\}^{-1} =22\cdot 15^2 h=22\cdot18=5
+ M'&=C_2\cdot \left\{ (C_1)^x \right\}^{-1} (\mathrm{mod}~23)=22\cdot \left\{15^{20}\right\}^{-1} =22\cdot 15^2=22\cdot18=5
 \end{align}
 %
 となり$M$と一致する．
@@ -151,8 +151,8 @@ $\alpha^a,\alpha^b$を求めると課題1よりそれぞれ，
 となり，$\alpha^{ab}$はそれぞれ，
 %
 \begin{align}
- \alpha^{ab}&=(\alpha^b)^a=15^6(\mathrm{mod}~23)=(15^2)^3=18^3=18^2\cdot18=2\cdot18=3\\
- \alpha^{ab}&=(\alpha^a)^b=4^9(\mathrm{mod}~23)=(4^3)^3=18^3=3
+ \alpha^{ab}&=(\alpha^b)^a=15^6(\mathrm{mod}~23)=(15^2)^3=18^3=18^2\cdot18=2\cdot18=13\\
+ \alpha^{ab}&=(\alpha^a)^b=4^9(\mathrm{mod}~23)=(4^3)^3=18^3=13
 \end{align}
 %
 となり一致する．
