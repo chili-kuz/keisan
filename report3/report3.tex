@@ -1,0 +1,344 @@
+\documentclass[a4paper,12pt]{jarticle}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{subfigure}
+\usepackage{comment}
+\usepackage{array}
+\usepackage{setspace} % setspaceパッケージのインクルード
+\usepackage{ascmac}
+%\usepackage{fancybx}
+
+\setlength{\hoffset}{0cm}
+\setlength{\oddsidemargin}{-3mm}
+\setlength{\evensidemargin}{-3cm}
+\setlength{\marginparsep}{0cm}
+\setlength{\marginparwidth}{0cm}
+\setlength{\textheight}{24.7cm}
+\setlength{\textwidth}{17cm}
+\setlength{\topmargin}{-45pt}
+
+
+\renewcommand{\baselinestretch}{1.6}
+\renewcommand{\floatpagefraction}{1}
+\renewcommand{\topfraction}{1}
+\renewcommand{\bottomfraction}{1}
+\renewcommand{\textfraction}{0}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+%\renewcommand{\figurename}{Fig.} %図をFig.にする
+\renewcommand{\baselinestretch}{1}
+
+%図のキャプションからコロン：を消す
+\makeatletter
+\long\def\@makecaption#1#2{% #1=図表番号、#2=キャプション本文
+\sbox\@tempboxa{#1. #2}
+\ifdim \wd\@tempboxa >\hsize
+#1 #2\par 
+\else
+\hb@xt@\hsize{\hfil\box\@tempboxa\hfil}
+\fi}
+\makeatother
+
+\begin{document}
+%
+\title{\vspace{-30mm} \fbox{\large{計算数学特論~レポート課題3~~~機械知能工学専攻~~16344217~~津上~祐典}}}
+\date{}
+%
+\maketitle
+%
+\vspace{-30mm}
+%\parindent = 0pt %すべての段落で字下げをしない
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\abovedisplayskip}{0pt} % 数式上部のマージン
+\setlength{\belowdisplayskip}{0pt} % 数式下部のマージン
+%\setstretch{1.3} % ページ全体の行間を設定
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{課題.~NIS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-3mm}
+%
+ \begin{table}[htbp]
+  \fontsize{10pt}{11pt}\selectfont
+  \begin{tabular}{c|cccccccccccc}
+       &[P,1]&[P,2]&[P,3]&[Q,1]&[Q,2]&[Q,3]&[R,1]&[R,2]&[R,3]&[S,1]&[S,2]&[S,3]\\\hline
+   inf &\{4\}&\{2\}&\{1,5\}&\{5\}&\{3\}&\{4\}&\{\}&\{1\}&\{3,5\}&\{\}&\{\}&\{1,4\}\\
+   sup &\{3,4\}&\{2,3\}&\{1,5\}&\{1,5\}&\{2,3\}&\{1,2,4\}&\{2\}&\{1,4\}&\{2,3,4,5\}&\{2,3,5\}&\{3,5\}&\{1,2,4\} 
+  \end{tabular}
+ \end{table}
+%
+\vspace{-10mm} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(1)~$\tau_1:[P,1]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_1)=0~,~maxsup(\tau_1)=0
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(2)~$\tau_2:[P,1]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_2)=0~,~maxsup(\tau_2)=\frac{1}{5}~,~INACC=\{3\}~,~maxacc(\tau_2)=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(3)~$\tau_3:[P,1]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_2)=\frac{1}{5}~,~INACC=\{3\}~,~minacc(\tau_3)=\frac{1}{2}\\
+ maxsup(\tau_2)=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_2)=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(4)~$\tau_4:[P,2]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_4)=0~,~maxsup(\tau_4)=\frac{2}{5}~,~INACC=\{3\}~,~maxacc(\tau_4)=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(5)~$\tau_5:[P,2]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_5)=0~,~maxsup(\tau_5)=\frac{1}{5}~,~INACC=\{3\}~,~maxacc(\tau_5)=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(6)~$\tau_6:[P,2]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_6)=0~,~maxsup(\tau_6)=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_6)=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(7)~$\tau_7:[P,3]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_7)=0~,~maxsup(\tau_7)=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_7)=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(8)~$\tau_8:[P,3]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_8)=0~,~maxsup(\tau_8)=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_8)=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(9)~$\tau_9:[P,3]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_9)=\frac{1}{5}~,~OUTACC=\{\}~,~minacc(\tau_9)=\frac{1}{2}\\
+ maxsup(\tau_9)=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_9)=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(10)~$\tau_{10}:[Q,1]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{10})=0~,~maxsup(\tau_{10})=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_{10})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(11)~$\tau_{11}:[Q,1]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{11})=0~,~maxsup(\tau_{11})=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_{11})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(12)~$\tau_{12}:[Q,1]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{12})=0~,~maxsup(\tau_{12})=\frac{1}{5}~,~INACC=\{1\}~,~maxacc(\tau_{12})=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(13)~$\tau_{13}:[Q,2]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{13})=0~,~maxsup(\tau_{13})=\frac{2}{5}~,~INACC=\{\}~,~maxacc(\tau_{13})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(14)~$\tau_{14}:[Q,2]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{14})=0~,~maxsup(\tau_{14})=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_{14})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(15)~$\tau_{15}:[Q,2]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{15})=0~,~maxsup(\tau_{15})=\frac{1}{5}~,~INACC=\{2\}~,~maxacc(\tau_{15})=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(16)~$\tau_{16}:[Q,3]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{16})=0~,~maxsup(\tau_{16})=\frac{1}{5}~,~INACC=\{2\}~,~maxacc(\tau_{16})=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(17)~$\tau_{17}:[Q,3]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{17})=0~,~maxsup(\tau_{17})=0
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(18)~$\tau_{18}:[Q,3]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{18})=\frac{1}{5}~,~OUTACC=\{2\}~,~minacc(\tau_{18})=\frac{1}{2}\\
+ maxsup(\tau_{18})=\frac{1}{5}~,~INACC=\{2\}~,~maxacc(\tau_{18})=\frac{1}{2}
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(19)~$\tau_{19}:[R,1]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{19})=0~,~maxsup(\tau_{19})=\frac{1}{5}~,~INACC=\{2\}~,~maxacc(\tau_{19})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(20)~$\tau_{20}:[R,1]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{20})=0~,~maxsup(\tau_{19})=0
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(21)~$\tau_{21}:[R,1]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{21})=0~,~maxsup(\tau_{21})=\frac{1}{5}~,~INACC=\{2\}~,~maxacc(\tau_{21})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(22)~$\tau_{22}:[R,2]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{22})=0~,~maxsup(\tau_{22})=0
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(23)~$\tau_{23}:[R,2]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{22})=0~,~maxsup(\tau_{22})=0
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(24)~$\tau_{24}:[R,2]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{24})=\frac{1}{5}~,~OUTACC=\{\}~,~maxsup(\tau_{24})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(25)~$\tau_{25}:[R,3]=>[S,1]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{25})=0~,~maxsup(\tau_{25})=\frac{3}{5}~,~INACC=\{2\}~,~maxacc(\tau_{25})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(26)~$\tau_{26}:[R,3]=>[S,2]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{26})=0~,~maxsup(\tau_{26})=\frac{2}{5}~,~INACC=\{\}~,~maxacc(\tau_{26})=1
+\end{align*}
+%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{(27)~$\tau_{27}:[R,3]=>[S,3]$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-4mm}
+%
+\begin{align*}
+ minsup(\tau_{27})=0~,~maxsup(\tau_{27})=\frac{2}{5}~,~INACC=\{2,4\}~,~maxacc(\tau_{27})=\frac{1}{2}
+\end{align*}
+%
+\end{document}
