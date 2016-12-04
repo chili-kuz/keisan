@@ -45,7 +45,7 @@
 %
 \maketitle
 %
-\vspace{-30mm}
+\vspace{-20mm}
 %\parindent = 0pt %すべての段落で字下げをしない
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +55,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{課題.~NIS}
+%\section*{課題.~NIS}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-3mm}
 %
@@ -95,8 +95,8 @@
 \vspace{-4mm}
 %
 \begin{align*}
- minsup(\tau_2)=\frac{1}{5}~,~INACC=\{3\}~,~minacc(\tau_3)=\frac{1}{2}\\
- maxsup(\tau_2)=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_2)=1
+ minsup(\tau_3)=\frac{1}{5}~,~INACC=\{3\}~,~minacc(\tau_3)=\frac{1}{2}\\
+ maxsup(\tau_3)=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_3)=1
 \end{align*}
 %
 \vspace{-10mm}
@@ -197,7 +197,7 @@
 \vspace{-4mm}
 %
 \begin{align*}
- minsup(\tau_{13})=0~,~maxsup(\tau_{13})=\frac{2}{5}~,~INACC=\{\}~,~maxacc(\tau_{13})=1
+ minsup(\tau_{13})=0~,~maxsup(\tau_{13})=\frac{2}{5}~,~INACC=\{2\}~,~maxacc(\tau_{13})=1
 \end{align*}
 %
 \vspace{-10mm}
@@ -248,7 +248,7 @@
 %
 \begin{align*}
  minsup(\tau_{18})=\frac{1}{5}~,~OUTACC=\{2\}~,~minacc(\tau_{18})=\frac{1}{2}\\
- maxsup(\tau_{18})=\frac{1}{5}~,~INACC=\{2\}~,~maxacc(\tau_{18})=\frac{1}{2}
+ maxsup(\tau_{18})=\frac{3}{5}~,~INACC=\{1,2\}~,~maxacc(\tau_{18})=1
 \end{align*}
 %
 \vspace{-10mm}
@@ -268,7 +268,7 @@
 \vspace{-4mm}
 %
 \begin{align*}
- minsup(\tau_{20})=0~,~maxsup(\tau_{19})=0
+ minsup(\tau_{20})=0~,~maxsup(\tau_{20})=0
 \end{align*}
 %
 \vspace{-10mm}
@@ -298,7 +298,7 @@
 \vspace{-4mm}
 %
 \begin{align*}
- minsup(\tau_{22})=0~,~maxsup(\tau_{22})=0
+ minsup(\tau_{23})=0~,~maxsup(\tau_{23})=0
 \end{align*}
 %
 \vspace{-10mm}
@@ -341,4 +341,19 @@
  minsup(\tau_{27})=0~,~maxsup(\tau_{27})=\frac{2}{5}~,~INACC=\{2,4\}~,~maxacc(\tau_{27})=\frac{1}{2}
 \end{align*}
 %
+以上より，$support\geq0.2~,~accuracy\geq0.8$を満たすPossible~ruleは，
+%
+\begin{align*}
+ &[P,1]=>[S,3]~,~[P,2]=>[S,1]~,~[P,2]=>[S,3]~,~[Q,1]=>[S,1]~,~[Q,1]=>[S,2] \\
+ &[Q,2]=>[S,1]~,~[Q,2]=>[S,2]~,~[Q,3]=>[S,3]~,~[R,1]=>[S,1]~,~[R,1]=>[S,3] \\
+ &[R,2]=>[S,3]~,~[R,3]=>[S,1]~,~[R,3]=>[S,2]
+\end{align*}
+%
+であり，Certain~ruleは，
+%
+\begin{align*}
+ [R,2]=>[S,3]
+\end{align*}
+%
+である．
 \end{document}
