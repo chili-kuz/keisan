@@ -68,7 +68,10 @@
   \end{tabular}
  \end{table}
 %
-\vspace{-10mm} 
+%\vspace{-10mm}
+以下に，$minsup,OUTACC,minacc,maxsup,INACC,maxacc$の計算結果を示す．レポー
+ト枚数の都合上，計算途中は省略した．また，すべてのCertain~rule~,~Possible~rule
+を求めた．
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{(1)~$\tau_1:[P,1]=>[S,1]$}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -85,7 +88,8 @@
 \vspace{-4mm}
 %
 \begin{align*}
- minsup(\tau_2)=0~,~maxsup(\tau_2)=\frac{1}{5}~,~INACC=\{3\}~,~maxacc(\tau_2)=\frac{1}{2}
+ minsup(\tau_2)=0~,~maxsup(\tau_2)=\frac{1}{5}\\
+ INACC=\{3\}~,~maxacc(\tau_2)=\frac{1}{2}
 \end{align*}
 %
 \vspace{-10mm}
@@ -95,7 +99,7 @@
 \vspace{-4mm}
 %
 \begin{align*}
- minsup(\tau_3)=\frac{1}{5}~,~INACC=\{3\}~,~minacc(\tau_3)=\frac{1}{2}\\
+ minsup(\tau_3)=\frac{1}{5}~,~OUTACC=\{3\}~,~minacc(\tau_3)=\frac{1}{2}\\
  maxsup(\tau_3)=\frac{1}{5}~,~INACC=\{\}~,~maxacc(\tau_3)=1
 \end{align*}
 %
@@ -341,17 +345,27 @@
  minsup(\tau_{27})=0~,~maxsup(\tau_{27})=\frac{2}{5}~,~INACC=\{2,4\}~,~maxacc(\tau_{27})=\frac{1}{2}
 \end{align*}
 %
-\vspace{-10mm}
+
+\vspace{10mm}
+以上まででminsupはOKでminaccはNOなのは
+%
+\begin{align*}
+ [P,1]=>[S,3]~,~[P,3]=>[S,3]~,~[Q,3]=>[S,3]
+\end{align*}
+%
+の３パターンである．これらの条件部に条件を追加する．
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{(28)~$\tau_{28}:[P,1]\land[Q,3]=>[S,3]$}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-4mm}
+%\vspace{-4mm}
 $inf([P,1]\land[Q,3])=\{4\}~,~sup([P,1]\land[Q,3])=\{4\}$より
 %
 \begin{align*}
  minsup(\tau_{28})=\frac{1}{5}~,~OUTACC=\{\}~,~minacc(\tau_{28})=1
 \end{align*}
 %
+となる．
+
 以上より，$support\geq0.2~,~accuracy\geq0.8$を満たすPossible~ruleは，
 %
 \begin{align*}

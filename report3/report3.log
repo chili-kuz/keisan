@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.23)  4 DEC 2016 21:42
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2016.5.23)  9 DEC 2016 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -219,9 +219,9 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 73.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 73.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 76.
  [1
 
 ] [2] [3]
@@ -229,10 +229,10 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 Here is how much of TeX's memory you used:
  2060 strings out of 493717
  25526 string characters out of 6150720
- 95882 words of memory out of 5000000
+ 94882 words of memory out of 5000000
  5589 multiletter control sequences out of 15000+600000
  17576 words of font info for 72 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  27i,8n,26p,247b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report3.dvi (3 pages, 10216 bytes).
+Output written on report3.dvi (3 pages, 10892 bytes).
